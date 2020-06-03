@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=GMT%2B8&allowPublicKeyRetrieval=true
+    username: root
+    password: '0909'
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  thymeleaf:
+    cache: false            # 开发时关闭缓存，否则无法实时看到页面效果
+    mode: LEGACYHTML5       # 使用非严格的HTML标准
+    encoding: utf-8
+mybatis:
+  type-aliases-package: com.xin.entity
+  mapper-locations: classpath:mapper/*Mapper.xml
